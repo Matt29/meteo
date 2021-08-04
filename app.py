@@ -18,6 +18,7 @@ app = dash.Dash(__name__,
     meta_tags=[{'name': 'viewport',
                 'content': 'width=device-width, initial-scale=1.0'}]
 )
+server = app.server
 
 #set positions to plot
 list_pos=[]
@@ -230,6 +231,5 @@ def _update_graph(clickData):
 
 
 #RUN SERVER
-app.run_server( port = 8090, dev_tools_ui=True, #debug=True,
-              dev_tools_hot_reload =True, threaded=True)
-server = app.server
+if __name__ == '__main__':
+    app.run_server( port = 8090,  debug=True)
