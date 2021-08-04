@@ -30,7 +30,7 @@ pytz==2021.1
 PyYAML==5.4.1
 Rosely==0.0.2.post3
 scipy==1.6.2
-setuptools==52.0.0.post20210125
+setuptools==51.3.3.post20210118
 six==1.15.0
 tenacity==6.3.1
 Werkzeug==1.0.1
