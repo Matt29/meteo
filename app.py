@@ -101,10 +101,11 @@ y1=spd[::npt]
 y1=y[::npt]
 u1=u1[::npt]
 v1=v1[::npt]
+dates=hydro.index[::npt]
 hydro_fig2.add_trace(go.Scatter(x=x,y=spd,mode='lines',name="current speed"))
 quiv=fac.create_quiver(x1,y1,u1,v1,scale =0.1, scaleratio = 0.25,arrow_scale=0.2,name="current Direction")
 hydro_fig2.add_trace(quiv.data[0])
-hydro_fig2.update_layout(xaxis_tickvals =x1[::8],xaxis_ticktext=hydro.index[::npt])
+hydro_fig2.update_layout(xaxis_tickvals =x1[::8],xaxis_ticktext=dates[::8])
 hydro_fig2.add_trace(go.Scatter(x=x,y=hydro.xe.values,line_width=0.5,name="water level",fill=None),secondary_y=True)
 hydro_fig2.update_layout(legend=dict(
     yanchor="top",
